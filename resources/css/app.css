@@ -1,0 +1,347 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Google Fonts - Montserrat (Display) + Inter (Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@theme {
+    /* Typography - Modern Professional */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+    /* Primary Colors - Warm Bronze/Gold */
+    --color-primary-50: #faf6f1;
+    --color-primary-100: #f5ede3;
+    --color-primary-200: #e8d8c4;
+    --color-primary-300: #d4bc9a;
+    --color-primary-400: #c4a070;
+    --color-primary-500: #A67C52;
+    --color-primary-600: #8B6914;
+    --color-primary-700: #7a5d12;
+    --color-primary-800: #654d10;
+    --color-primary-900: #4a380c;
+
+    /* Accent Colors - Deep Warm Bronze */
+    --color-accent-400: #b8956c;
+    --color-accent-500: #8B6914;
+    --color-accent-600: #6a5010;
+
+    /* Background Colors - Cream/Ivory */
+    --color-cream: #FAF8F5;
+    --color-ivory: #F5F2ED;
+    --color-warm-white: #FFFCF7;
+
+    /* Neutral/Warm Gray Colors */
+    --color-slate-50: #faf9f8;
+    --color-slate-100: #f5f4f2;
+    --color-slate-200: #e8e6e3;
+    --color-slate-300: #d4d1cc;
+    --color-slate-400: #9c9891;
+    --color-slate-500: #5A5A5A;
+    --color-slate-600: #4a4a47;
+    --color-slate-700: #3D3D3D;
+    --color-slate-800: #2a2a28;
+    --color-slate-900: #1a1a18;
+
+    /* Success/Error Colors */
+    --color-success-500: #22c55e;
+    --color-success-600: #16a34a;
+    --color-error-500: #ef4444;
+    --color-error-600: #dc2626;
+
+    /* WhatsApp Green */
+    --color-whatsapp: #25D366;
+    --color-whatsapp-dark: #128C7E;
+}
+
+/* Base Styles */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-sans text-slate-700 bg-cream antialiased;
+    }
+
+    /* main padding handled in blade layout conditionally */
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'Montserrat', sans-serif;
+        @apply font-semibold text-slate-800 tracking-tight;
+    }
+
+    h5,
+    h6 {
+        @apply font-sans font-semibold text-slate-800;
+    }
+}
+
+/* Component Styles */
+@layer components {
+
+    /* Smart Navbar Styles */
+    .navbar {
+        @apply fixed top-0 left-0 right-0 z-50;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .navbar-transparent {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .navbar-solid {
+        @apply bg-white/98 backdrop-blur-md shadow-sm;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }
+
+    /* Elegant Navigation Link - Dark (for light backgrounds) */
+    .nav-link-elegant {
+        @apply uppercase text-xs font-medium tracking-[0.2em] text-slate-600 hover:text-slate-900 transition-colors duration-300;
+    }
+
+    .nav-link-elegant.active {
+        @apply text-slate-900;
+    }
+
+    /* Elegant Navigation Link - Light (for dark/transparent backgrounds) */
+    .nav-link-light {
+        @apply uppercase text-xs font-medium tracking-[0.2em] text-white/90 hover:text-white transition-colors duration-300;
+    }
+
+    .nav-link-light.active {
+        @apply text-white;
+    }
+
+    /* Buttons */
+    .btn {
+        @apply inline-flex items-center justify-center px-6 py-3 font-medium transition-all duration-300 cursor-pointer;
+    }
+
+    .btn-primary {
+        @apply bg-slate-800 text-white hover:bg-slate-900;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-slate-700 border border-slate-300 hover:bg-slate-50;
+    }
+
+    .btn-outlined {
+        @apply bg-transparent text-slate-800 border border-slate-800 hover:bg-slate-800 hover:text-white uppercase text-xs tracking-[0.15em] font-medium px-8 py-3;
+    }
+
+    .btn-outlined-light {
+        @apply bg-transparent text-white border border-white/80 hover:bg-white hover:text-slate-800 uppercase text-xs tracking-[0.15em] font-medium px-8 py-3;
+    }
+
+    .btn-whatsapp {
+        @apply bg-[#25D366] text-white hover:bg-[#128C7E] rounded-lg;
+    }
+
+    /* Cards - Minimal Style */
+    .card {
+        @apply bg-white overflow-hidden transition-all duration-300;
+    }
+
+    .card-elevated {
+        @apply bg-white shadow-sm hover:shadow-md overflow-hidden transition-all duration-300;
+    }
+
+    /* Section Titles - Modern Bold Style */
+    .section-title {
+        font-family: 'Montserrat', sans-serif;
+        @apply text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 tracking-tight;
+    }
+
+    .section-title-sm {
+        @apply uppercase text-xs tracking-[0.2em] font-medium text-slate-500 mb-4;
+    }
+
+    .section-subtitle {
+        @apply text-lg text-slate-600 max-w-2xl font-light;
+    }
+
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Hero Fullwidth */
+    .hero-fullwidth {
+        @apply relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden;
+    }
+
+    .hero-overlay {
+        @apply absolute inset-0 bg-black/30;
+    }
+
+    .hero-content {
+        @apply relative z-10 text-center text-white px-4;
+    }
+
+    /* Image with Caption Overlay */
+    .image-caption-overlay {
+        @apply relative overflow-hidden;
+    }
+
+    .image-caption-overlay .caption {
+        @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white;
+    }
+
+    /* Form Inputs */
+    .form-input {
+        @apply w-full px-4 py-3 border border-slate-300 focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors bg-white;
+    }
+
+    .form-label {
+        @apply block text-sm font-medium text-slate-600 mb-2 uppercase tracking-wider;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+        @apply fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#128C7E] transition-all duration-200 hover:scale-110;
+    }
+
+    /* Category/Filter Buttons */
+    .filter-btn {
+        @apply inline-block px-6 py-2 text-xs uppercase tracking-[0.15em] font-medium border border-slate-300 text-slate-600 hover:border-slate-800 hover:text-slate-800 transition-colors bg-transparent;
+    }
+
+    .filter-btn.active {
+        @apply border-slate-800 text-slate-800;
+    }
+}
+
+/* Utility animations - Minimal & Elegant */
+@layer utilities {
+    .animate-fade-in {
+        animation: fadeIn 0.6s ease-out;
+    }
+
+    /* Premium Hero Slider Transitions */
+    .hero-slide-transition {
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-out;
+    }
+
+    .hero-text-animate {
+        animation: heroTextIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes heroTextIn {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Text Shadow for Transparent Navbar Contrast */
+    .text-shadow-hero {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-shadow-subtle {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Smooth navbar transition */
+    .navbar-transition {
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.3s ease,
+            box-shadow 0.3s ease,
+            backdrop-filter 0.3s ease;
+    }
+
+    /* Slide indicator animation */
+    .slide-indicator {
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.3s ease;
+    }
+
+    /* Scroll-triggered animations - Elegant with subtle motion */
+    .scroll-fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .scroll-fade-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .scroll-fade-in {
+        opacity: 0;
+        transition: opacity 0.8s ease-out;
+    }
+
+    .section-anchor {
+        scroll-margin-top: 6rem;
+        /* 96px - navbar height */
+    }
+
+    .scroll-fade-in.is-visible {
+        opacity: 1;
+    }
+
+    /* Scale-in animation for images */
+    .scroll-scale-in {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .scroll-scale-in.is-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* Stagger delay utilities */
+    .delay-100 {
+        transition-delay: 100ms;
+    }
+
+    .delay-200 {
+        transition-delay: 200ms;
+    }
+
+    .delay-300 {
+        transition-delay: 300ms;
+    }
+
+    /* Subtle hover effect for cards */
+    .hover-lift {
+        transition: opacity 0.3s ease;
+    }
+
+    .hover-lift:hover {
+        opacity: 0.9;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
