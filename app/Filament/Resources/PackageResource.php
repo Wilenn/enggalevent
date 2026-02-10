@@ -48,11 +48,7 @@ class PackageResource extends Resource
                             ->image()
                             ->directory('packages')
                             ->visibility('public'),
-                        Forms\Components\TextInput::make('price')
-                            ->label('Harga')
-                            ->numeric()
-                            ->prefix('Rp')
-                            ->required(),
+
                     ])->columns(2),
                 Forms\Components\Section::make('Produk dalam Paket')
                     ->schema([
@@ -108,10 +104,7 @@ class PackageResource extends Resource
                     ->label('Nama')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('price')
-                    ->label('Harga')
-                    ->money('IDR')
-                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('items_count')
                     ->label('Produk')
                     ->counts('items'),

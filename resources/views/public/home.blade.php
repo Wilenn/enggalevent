@@ -227,8 +227,7 @@
                                 <a href="{{ route('products.show', $product->slug) }}">{{ $product->name }}</a>
                             </h3>
                             <p class="text-sm text-slate-600 line-clamp-2 mb-3">{{ $product->short_description }}</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-sm font-medium text-primary-600">{{ $product->formatted_price }}</span>
+                            <div class="flex items-center justify-end">
                                 <a href="{{ route('products.show', $product->slug) }}" class="text-xs uppercase tracking-wider text-slate-600 hover:text-slate-800 transition-colors">
                                     Details →
                                 </a>

@@ -23,10 +23,7 @@
                 <h1 class="text-3xl md:text-4xl font-bold text-slate-900">{{ $package->name }}</h1>
                 <p class="mt-4 text-lg text-slate-600">{{ $package->description }}</p>
 
-                <div class="mt-8 p-6 bg-primary-50 rounded-lg">
-                    <span class="text-slate-600">Harga Paket</span>
-                    <p class="text-4xl font-bold text-primary-600">{{ $package->formatted_price }}</p>
-                </div>
+
 
                 @if($package->products && $package->products->count() > 0)
                     <div class="mt-8">

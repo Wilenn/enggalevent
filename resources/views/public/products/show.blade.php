@@ -90,10 +90,7 @@
                     <h1 class="mt-2 text-3xl font-bold text-slate-900">{{ $product->name }}</h1>
                     <p class="mt-4 text-slate-600">{{ $product->short_description }}</p>
 
-                    <div class="mt-6 p-4 bg-primary-50 rounded-lg">
-                        <span class="text-sm text-slate-600">Harga Sewa</span>
-                        <p class="text-3xl font-bold text-primary-600">{{ $product->formatted_price }}</p>
-                    </div>
+
 
                     <div class="mt-6 flex flex-col sm:flex-row gap-4">
                         <a href="https://wa.me/6281295518897" {{ urlencode($product->name) }}"
@@ -204,7 +201,7 @@
                                 <h3 class="font-semibold text-slate-900 group-hover:text-primary-600 transition-colors line-clamp-2">
                                     {{ $related->name }}
                                 </h3>
-                                <p class="mt-auto pt-2 font-bold text-primary-600">{{ $related->formatted_price }}</p>
+                                <p class="mt-auto pt-2 font-bold text-primary-600">View Details →</p>
                             </div>
                         </a>
                     @endforeach

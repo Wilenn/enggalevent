@@ -60,18 +60,7 @@ class ProductResource extends Resource
                                     ->addActionLabel('Tambah Spesifikasi')
                                     ->columnSpanFull(),
                             ])->columns(2),
-                        Forms\Components\Tabs\Tab::make('Harga')
-                            ->schema([
-                                Forms\Components\TextInput::make('price_per_day')
-                                    ->label('Harga per Hari')
-                                    ->numeric()
-                                    ->prefix('Rp')
-                                    ->required(),
-                                Forms\Components\TextInput::make('price_unit')
-                                    ->label('Satuan Harga')
-                                    ->default('/ hari')
-                                    ->maxLength(50),
-                            ])->columns(2),
+
                         Forms\Components\Tabs\Tab::make('Gambar')
                             ->schema([
                                 Forms\Components\FileUpload::make('images')
@@ -132,10 +121,7 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('category.name')
                     ->label('Kategori')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('price_per_day')
-                    ->label('Harga')
-                    ->money('IDR')
-                    ->sortable(),
+
                 Tables\Columns\IconColumn::make('is_featured')
                     ->label('Unggulan')
                     ->boolean(),

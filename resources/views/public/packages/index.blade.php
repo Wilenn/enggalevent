@@ -18,18 +18,20 @@
                 @forelse($packages as $package)
                     <div class="card flex flex-col">
                         <div
-                            class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-                            </svg>
+                            class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center overflow-hidden">
+                            @if($package->image)
+                                <img src="{{ Storage::url($package->image) }}" alt="{{ $package->name }}"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            @else
+                                <svg class="w-16 h-16 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                                </svg>
+                            @endif
                         </div>
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-bold text-slate-900">{{ $package->name }}</h3>
                             <p class="mt-2 text-slate-600 flex-1">{{ $package->description }}</p>
-                            <div class="mt-4">
-                                <span class="text-3xl font-bold text-primary-600">{{ $package->formatted_price }}</span>
-                            </div>
                             <div class="mt-4 flex gap-2">
                                 <a href="{{ route('packages.show', $package->slug) }}"
                                     class="btn btn-secondary flex-1 justify-center">Detail</a>
