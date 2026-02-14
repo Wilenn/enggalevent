@@ -180,11 +180,11 @@
                 </div>
                 
                 {{-- Right: Featured Category Image --}}
-                <div class="image-caption-overlay scroll-fade-up delay-200">
-                    <img src="{{ asset('images/featured.jpeg') }}" alt="Event Setup" class="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg">
+                <div class="image-caption-overlay scroll-fade-up delay-200 rounded-2xl shadow-lg">
+                    <img src="{{ asset('images/our_services.jpeg') }}" alt="Event Setup" class="w-full aspect-[4/3] object-cover">
                     <div class="caption">
                         <p class="text-sm uppercase tracking-wider text-white/80 mb-1">Featured</p>
-                        <p class="text-lg font-medium">Premium Tent Collections</p>
+                        <p class="text-lg font-medium">Premium Collections</p>
                     </div>
                 </div>
             </div>

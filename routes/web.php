@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\PackageController;
+
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PageController;
@@ -22,9 +22,7 @@ Route::get('/produk', [ProductController::class, 'index'])->name('products.index
 Route::get('/produk/{slug}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/produk/kategori/{slug}', [ProductController::class, 'category'])->name('products.category');
 
-// Packages
-Route::get('/paket', [PackageController::class, 'index'])->name('packages.index');
-Route::get('/paket/{slug}', [PackageController::class, 'show'])->name('packages.show');
+
 
 // Galleries
 Route::get('/galeri', [GalleryController::class, 'index'])->name('galleries.index');

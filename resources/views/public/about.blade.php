@@ -8,8 +8,7 @@
     <section class="relative py-20 lg:py-32 bg-slate-900 overflow-hidden section-anchor" id="about-intro">
         <div class="absolute inset-0 opacity-40">
             {{-- Placeholder for actual hero image --}}
-            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2098&q=80"
-                alt="Event Background" class="w-full h-full object-cover">
+            <img src="/images/about.jpeg" alt="Event Background" class="w-full h-full object-cover">
         </div>
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
 
@@ -57,8 +56,7 @@
                 </div>
                 <div class="relative" data-aos="fade-left">
                     <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10">
-                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80"
-                            alt="Our Team" class="w-full h-full object-cover">
+                        <img src="/images/cerita_kami_about.jpeg" alt="Our Team" class="w-full h-full object-cover">
                     </div>
                     {{-- Decorative elements --}}
                     <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-100 rounded-full blur-3xl -z-10"></div>
