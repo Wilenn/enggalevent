@@ -5,25 +5,13 @@
             {{-- Company Info --}}
             <div class="lg:col-span-1">
                 <a href="{{ route('home') }}" class="flex items-center gap-2 mb-4">
-                    {{-- <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                    </div> --}}
-                    <span class="text-xl font-bold text-white">EnggalJaya.Event</span>
+                    <span class="text-xl font-bold text-white">EnggalJayaEvent</span>
                 </a>
                 <p class="text-slate-400 mb-4">
                     Partner terpercaya untuk semua kebutuhan perlengkapan event Anda. Melayani dengan profesional dan
                     harga terjangkau.
                 </p>
                 <div class="flex gap-4">
-                    <!-- <a href="#" class="text-slate-400 hover:text-white transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                        </svg>
-                    </a> -->
                     <a href="https://www.instagram.com/enggaljaya.event"
                         class="text-slate-400 hover:text-white transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -86,15 +74,15 @@
                         <a href="tel:+6281234567890" class="text-slate-400 hover:text-white transition-colors">+62
                             812-9551-8897</a>
                     </li>
-                    {{-- <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <a href="mailto:info@eventrental.com"
-                            class="text-slate-400 hover:text-white transition-colors">info@eventrental.com</a>
-                    </li> --}}
+                        <a href="mailto:enggaljaya.event@gmail.com"
+                            class="text-slate-400 hover:text-white transition-colors">enggaljaya.event@gmail.com</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -105,7 +93,7 @@
         <div class="container-custom py-6">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <p class="text-slate-400 text-sm">
-                    &copy; {{ date('Y') }} EventRental. All rights reserved.
+                    &copy; {{ date('Y') }} EnggalJayaEvent. All rights reserved.
                 </p>
                 <p class="text-slate-500 text-sm">
                     Partner terpercaya untuk kebutuhan event Anda

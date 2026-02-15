@@ -51,7 +51,7 @@
                                 </p>
                             </div>
                         </div>
-                        {{-- <div class="flex gap-4">
+                        <div class="flex gap-4">
                             <div
                                 class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                                 <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,24 +62,24 @@
                             <div>
                                 <h3 class="font-semibold text-slate-900">Email</h3>
                                 <p class="text-slate-600">
-                                    <a href="mailto:info@eventrental.com"
-                                        class="hover:text-primary-600">info@eventrental.com</a>
+                                    <a href="mailto:enggaljaya.event@gmail.com"
+                                        class="hover:text-primary-600">enggaljayaevent@gmail.com</a>
                                 </p>
                             </div>
-                        </div> --}}
-                        <div class="flex gap-4">
-                            <div
-                                class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-slate-900">Jam Operasional</h3>
-                                <p class="text-slate-600">Senin - Sabtu: 08.00 - 17.00 WIB<br>Minggu: Tutup</p>
-                            </div>
                         </div>
+                        <!-- <div class="flex gap-4">
+                                        <div
+                                            class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold text-slate-900">Jam Operasional</h3>
+                                            <p class="text-slate-600">Senin - Sabtu: 08.00 - 17.00 WIB<br>Minggu: Tutup</p>
+                                        </div>
+                                    </div> -->
                     </div>
 
                     {{-- WhatsApp CTA --}}

@@ -35,13 +35,18 @@
                     <p class="mt-4 text-lg text-slate-600">{{ $article->excerpt }}</p>
                 </header>
 
-                {{-- Featured Image Placeholder --}}
-                <div
-                    class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center mb-8">
-                    <svg class="w-16 h-16 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+                {{-- Featured Image --}}
+                <div class="aspect-video bg-slate-200 rounded-lg overflow-hidden mb-8">
+                    @if($article->featured_image)
+                        <img src="{{ Storage::url($article->featured_image) }}" alt="{{ $article->title }}" class="w-full h-full object-cover">
+                    @else
+                        <div class="w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    @endif
                 </div>
 
                 {{-- Content --}}
@@ -55,7 +60,7 @@
                         Artikel</a>
                     <div class="flex items-center gap-4">
                         <span class="text-sm text-slate-400">Bagikan:</span>
-                        <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . url()->current()) }}"
+                        <a href="https://wa.me/6281295518897"
                             target="_blank" class="text-slate-400 hover:text-green-500">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path

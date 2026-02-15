@@ -59,7 +59,7 @@ class GalleryResource extends Resource
                         Forms\Components\Repeater::make('images')
                             ->relationship()
                             ->schema([
-                                Forms\Components\FileUpload::make('image')
+                                Forms\Components\FileUpload::make('image_path')
                                     ->label('Gambar')
                                     ->image()
                                     ->directory('gallery-images')

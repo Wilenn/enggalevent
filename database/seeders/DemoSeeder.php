@@ -4,11 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Product;
-use App\Models\Package;
 use App\Models\Testimonial;
 use App\Models\Article;
 use App\Models\Gallery;
-use App\Models\SiteSetting;
 use Illuminate\Database\Seeder;
 
 class DemoSeeder extends Seeder
@@ -158,42 +156,6 @@ class DemoSeeder extends Seeder
             Product::create($productData);
         }
 
-        // Packages
-        $packages = [
-            [
-                'name' => 'Paket Pernikahan Basic',
-                'slug' => 'paket-pernikahan-basic',
-                'description' => 'Paket lengkap untuk pernikahan dengan 100 tamu. Termasuk tenda, kursi, meja, dan dekorasi dasar.',
-                'price' => 15000000,
-                'meta_title' => 'Paket Sewa Perlengkapan Pernikahan Basic | 100 Tamu',
-                'meta_description' => 'Paket sewa perlengkapan pernikahan lengkap untuk 100 tamu. Termasuk tenda, kursi Tiffany, meja bulat, dan dekorasi. Rp 15 juta.',
-                'is_featured' => true,
-                'sort_order' => 1,
-            ],
-            [
-                'name' => 'Paket Seminar 50 Orang',
-                'slug' => 'paket-seminar-50',
-                'description' => 'Paket lengkap untuk seminar atau workshop dengan 50 peserta.',
-                'price' => 5000000,
-                'meta_title' => 'Paket Sewa Perlengkapan Seminar | 50 Peserta',
-                'meta_description' => 'Paket sewa perlengkapan seminar untuk 50 peserta. Termasuk kursi Futura, meja, sound system. Mulai Rp 5 juta.',
-                'is_featured' => true,
-                'sort_order' => 2,
-            ],
-            [
-                'name' => 'Paket Pameran Booth',
-                'slug' => 'paket-pameran-booth',
-                'description' => 'Paket untuk booth pameran standar 3x3 meter.',
-                'price' => 3500000,
-                'is_featured' => false,
-                'sort_order' => 3,
-            ],
-        ];
-
-        foreach ($packages as $packageData) {
-            Package::create($packageData);
-        }
-
         // Testimonials
         $testimonials = [
             [
@@ -274,22 +236,6 @@ class DemoSeeder extends Seeder
 
         foreach ($galleries as $galleryData) {
             Gallery::create($galleryData);
-        }
-
-        // Site Settings
-        $settings = [
-            ['key' => 'site_name', 'value' => 'EventRental', 'group' => 'general'],
-            ['key' => 'site_tagline', 'value' => 'Sewa Perlengkapan Event Profesional', 'group' => 'general'],
-            ['key' => 'whatsapp_number', 'value' => '6281234567890', 'group' => 'contact'],
-            ['key' => 'phone', 'value' => '+62 812 3456 7890', 'group' => 'contact'],
-            ['key' => 'email', 'value' => 'info@eventrental.com', 'group' => 'contact'],
-            ['key' => 'address', 'value' => 'Jl. Contoh Alamat No. 123, Jakarta Selatan', 'group' => 'contact'],
-            ['key' => 'default_meta_title', 'value' => 'EventRental - Sewa Perlengkapan Event Terlengkap', 'group' => 'seo'],
-            ['key' => 'default_meta_description', 'value' => 'Sewa tenda, kursi, meja, dan perlengkapan event profesional. Melayani pernikahan, pameran, seminar. Harga terjangkau, kualitas terbaik.', 'group' => 'seo'],
-        ];
-
-        foreach ($settings as $setting) {
-            SiteSetting::create($setting);
         }
     }
 }

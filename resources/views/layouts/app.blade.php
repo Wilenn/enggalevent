@@ -25,7 +25,7 @@
     <meta property="og:title" content="{{ $metaTitle ?? config('app.name') }}">
     <meta property="og:description"
         content="{{ $metaDescription ?? 'Sewa tenda, kursi, meja, dan perlengkapan event profesional.' }}">
-    <meta property="og:image" content="{{ $ogImage ?? asset('images/og-default.jpg') }}">
+    <meta property="og:image" content="{{ $ogImage ?? asset('images/og-default.jpeg') }}">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">

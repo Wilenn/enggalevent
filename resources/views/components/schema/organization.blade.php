@@ -8,39 +8,32 @@
     "url": "{{ url('/') }}",
     "logo": "{{ asset('images/logo.png') }}",
     "image": "{{ asset('images/og-default.jpg') }}",
-    "telephone": "+62-812-3456-7890",
-    "email": "info@eventrental.com",
+    "telephone": "+62-812-9551-8897",
+    "email": "enggaljaya.event@gmail.com",
     "address": {
         "@@type": "PostalAddress",
-        "streetAddress": "Jl. Raya Event No. 123",
-        "addressLocality": "Jakarta Selatan",
-        "addressRegion": "DKI Jakarta",
-        "postalCode": "12345",
+        "streetAddress": "Jalan Ceger Raya No.8 Jurang Mangu Timur, Pd. Karya, Kec. Pd. Aren",
+        "addressLocality": "Tangerang Selatan",
+        "addressRegion": "Banten",
+        "postalCode": "15222",
         "addressCountry": "ID"
     },
     "geo": {
         "@@type": "GeoCoordinates",
-        "latitude": "-6.2088",
-        "longitude": "106.8456"
+        "latitude": "-6.2626234",
+        "longitude": "106.7328268"
     },
     "openingHoursSpecification": [
         {
             "@@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "opens": "08:00",
             "closes": "17:00"
-        },
-        {
-            "@@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "08:00",
-            "closes": "15:00"
         }
     ],
-    "priceRange": "Rp 50.000 - Rp 5.000.000",
+    "priceRange": "Rp 50.000 - Rp 10.000.000",
     "sameAs": [
-        "https://www.instagram.com/eventrental",
-        "https://www.facebook.com/eventrental"
+        "https://www.instagram.com/enggaljaya.event"
     ],
     "hasOfferCatalog": {
         "@@type": "OfferCatalog",
