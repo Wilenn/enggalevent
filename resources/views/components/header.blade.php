@@ -6,7 +6,8 @@
         scrollThreshold: 10,
         mobileMenuOpen: false,
         isHomePage: {{ request()->routeIs('home') ? 'true' : 'false' }}
-    }" x-init="$nextTick(() => { atTop = window.scrollY <= 10 })" {{-- Unthrottled handler for critical state
+    }" x-init="$nextTick(() => { atTop = window.scrollY <= 10 })"
+    @resize.window="if (window.innerWidth > 1024) mobileMenuOpen = false" {{-- Unthrottled handler for critical state
     (transparency at top) --}} @scroll.window.passive="
         atTop = window.scrollY <= 10;
         if (atTop) hidden = false;
